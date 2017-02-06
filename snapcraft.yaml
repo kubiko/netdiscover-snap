@@ -1,0 +1,25 @@
+name: netdiscover 
+version: "0.3-beta"
+summary: netdiscover 
+description: |
+  netdiscover
+
+  Netdiscover is a network address discovering
+  tool, developed mainly for those wireless networks without dhcp server, it
+  also works on hub/switched networks. Its based on arp packets, it will send arp
+  requests and sniff for replys.
+
+confinement: strict
+grade: stable
+
+apps:
+    netdiscover:
+        command: netdiscover
+        plugs: [network, network-bind, network-control, network-observe, network-setup-observe, bluetooth-control]
+
+parts:
+    netdiscover:
+        plugin: cmake
+        source: https://github.com/alexxy/netdiscover.git
+        build-packages: [libpcap-dev, libnet1-dev ]
+
