@@ -1,6 +1,6 @@
-name: netdiscover 
+name: netdiscover-ondra
 version: "0.3-beta"
-summary: netdiscover 
+summary: netdiscover
 description: |
   netdiscover
 
@@ -13,7 +13,7 @@ confinement: strict
 grade: stable
 
 apps:
-    netdiscover:
+    netdiscover-ondra:
         command: netdiscover
         plugs: [network, network-bind, network-control, network-observe, network-setup-observe, bluetooth-control]
 
